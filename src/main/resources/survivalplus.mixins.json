@@ -1,0 +1,9 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "local.survivalplus.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": ["ServerInventoryMixin"],
+  "client": ["InventoryScreenMixin", "CreativeScreenMixin", "CreativePacketMixin"],
+  "injectors": {"defaultRequire": 1}
+}
