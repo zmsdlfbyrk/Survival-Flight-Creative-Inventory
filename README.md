@@ -23,6 +23,12 @@ Cheats do not need to be enabled.
 Land before disabling flight: fall damage applies again after disabling.
 The internal mod ID and commands remain `survivalplus`.
 
+## Download
+
+[Download Survival Plus 1.0.1 for Minecraft 1.21.1 / NeoForge 21.1.250](downloads/survivalplus-1.0.1-neoforge-21.1.250.jar)
+
+Place the downloaded JAR in your NeoForge profile’s `mods` folder.
+
 ## Build and install
 
 With JDK 21 installed, run `./gradlew build` (Windows: `gradlew.bat build`).
