@@ -18,16 +18,23 @@ Cheats do not need to be enabled.
 
 - `/survivalplus on` — enable.
 - `/survivalplus off` — disable.
-- `/survivalplus` — toggle.
+- `/survivalplus` — enable both features, or disable both if both are already enabled.
+- `/survivalplus flight` — toggle flight without changing the inventory setting.
+- `/survivalplus inventory` — toggle creative inventory without changing the flight setting.
+- `/survivalplus flight on` / `/survivalplus flight off` — explicitly enable / disable flight.
+- `/survivalplus inventory on` / `/survivalplus inventory off` — explicitly enable / disable creative inventory.
+
+`/survivalplus on` and `/survivalplus off` enable / disable both features.
+Independent settings persist after death and rejoining. Existing 1.0.1 settings are preserved on upgrade.
 
 Land before disabling flight: fall damage applies again after disabling.
 The internal mod ID and commands remain `survivalplus`.
 
 ## Download
 
-[Download Survival Plus 1.0.1 for Minecraft 1.21.1 / NeoForge 21.1.250](downloads/survivalplus-1.0.1-neoforge-21.1.250.jar)
+[Download Survival Flight & Creative Inventory 1.1.0 for Minecraft 1.21.1 / NeoForge 21.1.250](downloads/survivalplus-1.1.0-neoforge-21.1.250.jar)
 
-Place the downloaded JAR in your NeoForge profile’s `mods` folder.
+Replace the old mod JAR in your NeoForge profile’s `mods` folder with this file. Do not keep both versions installed.
 
 ## Build and install
 
@@ -39,7 +46,8 @@ Do not install a sources JAR as the mod.
 ## Verification status
 
 Source code has been reviewed and `./gradlew build --offline --no-daemon`
-completed successfully with JDK 21. Automated gameplay tests are not included.
+completed successfully with JDK 21. All 36 command-state combinations passed.
+Automated gameplay tests are not included.
 Flight and inventory behavior have not been verified in a running game.
 
 ## Русский
@@ -47,5 +55,6 @@ Flight and inventory behavior have not been verified in a running game.
 Мод добавляет полёт и меню креатива с бесплатными предметами в выживании.
 Здоровье, голод и обычные механики выживания сохраняются.
 Работает только у владельца одиночного мира. Управление: команды выше,
+`/survivalplus flight` — отдельно полёт, `/survivalplus inventory` — отдельно инвентарь.
 E — инвентарь, двойной пробел — полёт, пробел / Shift — вверх / вниз.
 Перед отключением приземлитесь.

@@ -185,3 +185,20 @@ idea {
         downloadJavadoc = true
     }
 }
+
+// Test independent command settings without a framework or a Minecraft client.
+sourceSets {
+    commandTest {
+        compileClasspath += sourceSets.main.output
+        runtimeClasspath += sourceSets.main.output
+    }
+}
+tasks.register('featureStateTest', JavaExec) {
+    dependsOn tasks.named('commandTestClasses')
+    classpath = sourceSets.commandTest.runtimeClasspath
+    mainClass = 'local.survivalplus.FeatureStateTest'
+    javaLauncher = javaToolchains.launcherFor {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+tasks.named('check') { dependsOn tasks.named('featureStateTest') }

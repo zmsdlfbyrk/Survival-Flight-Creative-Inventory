@@ -14,6 +14,6 @@ public abstract class ServerInventoryMixin {
     @Shadow public ServerPlayer player;
     @Redirect(method = "handleSetCreativeModeSlot", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/level/ServerPlayerGameMode;isCreative()Z"))
     private boolean survivalplus$acceptCreativeInventory(ServerPlayerGameMode mode) {
-        return mode.isCreative() || SurvivalPlus.active(player);
+        return mode.isCreative() || SurvivalPlus.inventoryActive(player);
     }
 }

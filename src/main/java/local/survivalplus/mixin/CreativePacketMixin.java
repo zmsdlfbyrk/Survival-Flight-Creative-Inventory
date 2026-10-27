@@ -11,6 +11,6 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 public abstract class CreativePacketMixin {
     @Redirect(method = {"handleCreativeModeItemAdd", "handleCreativeModeItemDrop"}, at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/GameType;isCreative()Z"))
     private boolean survivalplus$allowInventoryPackets(GameType mode) {
-        return mode.isCreative() || (mode == GameType.SURVIVAL && ClientState.enabled);
+        return mode.isCreative() || (mode == GameType.SURVIVAL && ClientState.inventoryEnabled);
     }
 }

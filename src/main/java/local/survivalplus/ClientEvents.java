@@ -9,6 +9,6 @@ import net.neoforged.neoforge.client.event.ClientPlayerNetworkEvent;
 public final class ClientEvents {
     @SubscribeEvent
     public static void logout(ClientPlayerNetworkEvent.LoggingOut event) {
-        ClientState.enabled = false;
+        ClientState.inventoryEnabled = false;
     }
 }

@@ -11,6 +11,6 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 public abstract class CreativeScreenMixin {
     @Redirect(method = {"init", "containerTick"}, at = @At(value = "INVOKE", target = "Lnet/minecraft/client/multiplayer/MultiPlayerGameMode;hasInfiniteItems()Z"))
     private boolean survivalplus$keepCreativeOpen(MultiPlayerGameMode mode) {
-        return mode.hasInfiniteItems() || ClientState.enabled;
+        return mode.hasInfiniteItems() || ClientState.inventoryEnabled;
     }
 }
